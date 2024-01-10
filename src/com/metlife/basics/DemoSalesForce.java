@@ -13,17 +13,25 @@ public class DemoSalesForce
     {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
+        //Implicit wait for 20 seconds:
        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        //Browser launch with salesforce Url:
         driver.get("https://login.salesforce.com/?locale=in");
+        //Click on Try link:
         driver.findElement(By.xpath("//div[@id='signup']/a")).click();;
+        //Enter firstname:
         driver.findElement(By.xpath("//input[@name='UserFirstName']")).sendKeys("john");
+        //Enter lastname:
         driver.findElement(By.xpath("//input[@name='UserLastName']")).sendKeys("ramsay");
+        //Enter email:
         driver.findElement(By.xpath("//input[@name='UserEmail']")).sendKeys("john@CCCS.COM");
+        //Select jobtitle:
         Select jobTitle=new Select(driver.findElement(By.name("UserTitle")));
-       jobTitle.selectByVisibleText("IT_Manager_AP");
+        jobTitle.selectByVisibleText("IT_Manager_AP");
+        Select employee:
         Select employee=new Select(driver.findElement(By.name("CompanyEmployees")));
-        employee.selectByVisibleText("101-200 emplpoyees");
+        employee.selectByVisibleText("101-200 employees");
+        //Click on checkbox:
         driver.findElement(By.xpath("//div[@class='checkbox-ui']")).click();
-
     }
 }
