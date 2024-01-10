@@ -49,7 +49,7 @@ public class Demo3FBSignup
         //Absolute Xpath to click on first radio button:
         //driver.findElement(By.xpath("//span[@class='_5k_3']/span[1]/input")).click();
         Thread.sleep(3000);
-        //Relative Xpath Xpath to click on first radio button:
+        //Relative Xpath to click on first radio button:
         driver.findElement(By.xpath("//input[@value='1']")).click();
 
         //Click on signup button:
