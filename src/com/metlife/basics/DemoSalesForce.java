@@ -13,7 +13,7 @@ public class DemoSalesForce
     {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
-        //Implicit wait for 20 seconds:
+        //Implicit wait for 20 miliseconds:
        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         //Browser launch with salesforce Url:
         driver.get("https://login.salesforce.com/?locale=in");
