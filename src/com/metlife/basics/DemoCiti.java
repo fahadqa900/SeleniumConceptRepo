@@ -17,19 +17,29 @@ public class DemoCiti
         //Launch the browser for citibank Url:
         driver.get("https://www.citibank.co.in/ssjsps/forgetuseridmidssi.jsp");
         //Select Product Type as Credit Card:
-        Select creditSelect=new Select(driver.findElement(By.xpath("//ul[@id='sbOptions_2036625']/li[3]")));
-        creditSelect.selectByVisibleText("Credit Card");
+        driver.findElement(By.xpath("//a[text()='select your product type']")).click();
+        driver.findElement(By.xpath("//a[text()='Credit Card']")).click();
+
         //Enter credit card number in four text boxes:
         driver.findElement(By.xpath("//input[@name='citiCard1']")).sendKeys("4545");
         driver.findElement(By.xpath("//input[@name='citiCard2']")).sendKeys("5656");
         driver.findElement(By.xpath("//input[@name='citiCard3']")).sendKeys("8887");
         driver.findElement(By.xpath("//input[@name='citiCard4']")).sendKeys("9998");
-       //Enter CVV:
+
+        //Enter CVV:
         driver.findElement(By.xpath("//input[@name='CCVNO']")).sendKeys("1234567890");
+
         //Enter date:
-        driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr[3]/td[5]/a")).click();
+        //driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr[3]/td[5]/a")).click();
+        driver.findElement(By.id("bill-date-long")).click();
+        Select selectYear=new Select(driver.findElement(By.xpath("//select[@class='ui-datepicker-year']")));
+        selectYear.selectByVisibleText("2022");
+        Select selectMonth=new Select(driver.findElement(By.xpath("//select[@class='ui-datepicker-month']")));
+        selectMonth.selectByVisibleText("Apr");
+        driver.findElement(By.xpath("//a[text()='14']")).click();
         //Click on proceed:
         driver.findElement(By.xpath("//input[@value='PROCEED']")).click();
+        //Print:
         String actualError=driver.findElement(By.xpath("//div[@role='dialog']")).getText();
         System.out.println(actualError);
     }
