@@ -28,14 +28,16 @@ public class DemoSalesForce
         //Select jobtitle:
         Select jobTitle=new Select(driver.findElement(By.name("UserTitle")));
         jobTitle.selectByVisibleText("IT_Manager_AP");
+        //Select country:
+        WebElement selectCountry= driver.findElement(By.xpath("//select[@name='CompanyCountry']"));
+        Select countrySelect=new Select(selectCountry);
+        countrySelect.selectByVisibleText("Maldives");
         //Select employee:
         Select employee=new Select(driver.findElement(By.name("CompanyEmployees")));
         employee.selectByVisibleText("101-200 employees");
         //Click on checkbox:
         driver.findElement(By.xpath("(//div[@class='checkbox-ui'])[2]")).click();
-       //Select country:
-       WebElement selectCountry= driver.findElement(By.xpath("//select[@name='CompanyCountry']"));
-       Select countrySelect=new Select(selectCountry);
-       countrySelect.selectByVisibleText("Maldives");
+        //Click on button:
+        driver.findElement(By.name("start my free trial")).click();
     }
 }
