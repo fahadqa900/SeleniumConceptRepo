@@ -32,6 +32,6 @@ public class DemoSalesForce
         Select employee=new Select(driver.findElement(By.name("CompanyEmployees")));
         employee.selectByVisibleText("101-200 employees");
         //Click on checkbox:
-        driver.findElement(By.xpath("//div[@class='checkbox-ui']")).click();
+        driver.findElement(By.xpath("(//div[@class='checkbox-ui'])[2]")).click();
     }
 }
