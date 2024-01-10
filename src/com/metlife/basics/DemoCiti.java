@@ -30,7 +30,7 @@ public class DemoCiti
         driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr[3]/td[5]/a")).click();
         //Click on proceed:
         driver.findElement(By.xpath("//input[@value='PROCEED']")).click();
-        String actualError=driver.findElement(By.xpath("//div[@role='dialogue']")).getText();
+        String actualError=driver.findElement(By.xpath("//div[@role='dialog']")).getText();
         System.out.println(actualError);
     }
 }
