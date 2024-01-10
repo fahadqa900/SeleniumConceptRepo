@@ -33,5 +33,9 @@ public class DemoSalesForce
         employee.selectByVisibleText("101-200 employees");
         //Click on checkbox:
         driver.findElement(By.xpath("(//div[@class='checkbox-ui'])[2]")).click();
+       //Select country:
+       WebElement selectCountry= driver.findElement(By.xpath("//select[@name='CompanyCountry']"));
+       Select countrySelect=new Select(selectCountry);
+       countrySelect.selectByVisibleText("Maldives");
     }
 }
