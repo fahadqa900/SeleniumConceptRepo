@@ -30,14 +30,15 @@ public class DemoCiti
         driver.findElement(By.xpath("//input[@name='CCVNO']")).sendKeys("1234567890");
 
         //Enter date:
-        //driver.findElement(By.xpath("//table[@class='ui-datepicker-calendar']/tbody/tr[3]/td[5]/a")).click();
         driver.findElement(By.id("bill-date-long")).click();
         Select selectYear=new Select(driver.findElement(By.xpath("//select[@class='ui-datepicker-year']")));
         selectYear.selectByVisibleText("2022");
         Select selectMonth=new Select(driver.findElement(By.xpath("//select[@class='ui-datepicker-month']")));
         selectMonth.selectByVisibleText("Apr");
         driver.findElement(By.xpath("//a[text()='14']")).click();
-        //Click on proceed:
+        //Click on checkbox:
+        driver.findElement(By.name("agree")).click();
+       //Click on proceed:
         driver.findElement(By.xpath("//input[@value='PROCEED']")).click();
         //Print:
         String actualError=driver.findElement(By.xpath("//div[@role='dialog']")).getText();
