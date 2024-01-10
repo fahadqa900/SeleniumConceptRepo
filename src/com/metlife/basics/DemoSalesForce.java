@@ -28,7 +28,7 @@ public class DemoSalesForce
         //Select jobtitle:
         Select jobTitle=new Select(driver.findElement(By.name("UserTitle")));
         jobTitle.selectByVisibleText("IT_Manager_AP");
-        Select employee:
+        //Select employee:
         Select employee=new Select(driver.findElement(By.name("CompanyEmployees")));
         employee.selectByVisibleText("101-200 employees");
         //Click on checkbox:
