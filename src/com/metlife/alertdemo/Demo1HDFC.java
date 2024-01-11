@@ -25,5 +25,7 @@ public class Demo1HDFC
         System.out.println(actualAlert);
         //Switch to alert popup and click on ok:
         driver.switchTo().alert().accept();
+        //close all running sessions:
+        driver.quit();
     }
 }
