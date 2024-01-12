@@ -24,7 +24,7 @@ public class DemoCollection1
         //lst.remove(1);
         //By taking Object:
         lst.remove((Object)60);
-        //Print values of ArrayList after removing 40 from collection:
+        //Print values of ArrayList after removing 60 from collection:
         System.out.println(lst);
         //Print values greater than or equal to 50:
         for(int val:lst)
