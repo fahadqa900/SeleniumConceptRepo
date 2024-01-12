@@ -18,7 +18,12 @@ public class DemoCollection1
         //Print all store values of ArrayList:
         System.out.println(lst);
         //Remove 60 from ArrayList:
-        lst.remove(lst.get(1));
+        //By taking index through get method:
+        //lst.remove(lst.get(1));
+        //By taking index:
+        //lst.remove(1);
+        //By taking Object:
+        lst.remove((Object)60);
         //Print values of ArrayList after removing 40 from collection:
         System.out.println(lst);
         //Print values greater than or equal to 50:
