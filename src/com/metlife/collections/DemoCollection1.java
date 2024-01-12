@@ -22,19 +22,10 @@ public class DemoCollection1
         //Print values of ArrayList after removing 40 from collection:
         System.out.println(lst);
         //Print values greater than or equal to 50:
-        int i=0;
-        while (i<189)
+        for(int val:lst)
         {
-            if (i>=50)
-            {
-                break;
-            }
-            else
-            {
-             for(int j=0;j<189;j++)
-             {
-                 System.out.println(lst.get(j));
-             }
+            if (val>=50) {
+                System.out.println(val);
             }
         }
 
