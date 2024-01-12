@@ -31,9 +31,9 @@ public class DemoCollection1
             }
             else
             {
-             for(int i=0;i<189;i++)
+             for(int j=0;j<189;j++)
              {
-                 System.out.println(lst.get(i));
+                 System.out.println(lst.get(j));
              }
             }
         }
