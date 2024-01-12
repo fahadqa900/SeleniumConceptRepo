@@ -17,6 +17,8 @@ public class DemoCollection1
         lst.add(190);
         //Print all store values of ArrayList:
         System.out.println(lst);
+        //Print size of ArrayList:
+        System.out.println(lst.size());
         //Remove 60 from ArrayList:
         //By taking index through get method:
         //lst.remove(lst.get(1));
