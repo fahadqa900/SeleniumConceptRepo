@@ -21,6 +21,7 @@ public class Demo1HDFC
         driver.switchTo().frame("login_page");
         //Inspect the element on frame and enter text:
         driver.findElement(By.name("fldLoginUserId")).sendKeys("john@test.com");
-
+        //Click on continue link button:
+        driver.findElement(By.linkText("CONTINUE")).click();
     }
 }
