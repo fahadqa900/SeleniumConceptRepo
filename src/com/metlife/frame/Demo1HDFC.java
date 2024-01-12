@@ -22,6 +22,10 @@ public class Demo1HDFC
         //Inspect the element on frame and enter text:
         driver.findElement(By.name("fldLoginUserId")).sendKeys("john@test.com");
         //Click on continue link button:
+        //link text works based on font available on UI:
+        //xpath works based on html font:
         driver.findElement(By.linkText("CONTINUE")).click();
+        //To switch to main html from frame:
+        driver.switchTo().defaultContent();
     }
 }
