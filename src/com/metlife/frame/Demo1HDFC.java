@@ -27,5 +27,8 @@ public class Demo1HDFC
         driver.findElement(By.linkText("CONTINUE")).click();
         //To switch to main html from frame:
         driver.switchTo().defaultContent();
+        //When tag name a is expandable we can use partial link text
+        //When tag name a is not expandable we can not use partial link text we use only
+        //link text if tag name a is not expandable
     }
 }

@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.time.Duration;
+
 public class Demo2OpenEMR
 {
     public static void main(String[] args)
@@ -15,6 +17,8 @@ public class Demo2OpenEMR
         driver.manage().window().maximize();
         //Launch the browser Url:
         driver.get("http://demo.openemr.io/b/openemr/");
+        //Apply implicitly wait of 20 mili seconds:
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         //Enter username:
         driver.findElement(By.id("authUser")).sendKeys("admin");
         //Enter the password:
@@ -35,5 +39,8 @@ public class Demo2OpenEMR
         driver.findElement(By.name("form_fname")).sendKeys("fahad");
         //Enter the lastname:
         driver.findElement(By.name("form_lname")).sendKeys("khan");
+        driver.findElement(By.id("form_DOB")).sendKeys("2024-01-16");
+        Select gender=new Select(driver.findElement(By.id("form_sex")));
+        gender.selectByVisibleText("Male");
     }
 }
