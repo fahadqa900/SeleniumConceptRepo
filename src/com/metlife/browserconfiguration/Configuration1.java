@@ -13,6 +13,7 @@ public class Configuration1
     {
         //Apart from Actions class also we discussed about browser configuration in this
         //section:
+        //Also we discussed about wait commands in this section:
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
